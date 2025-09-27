@@ -297,3 +297,156 @@ svg {
   background-color: var(--bs-black);
   fill: white;
 }
+
+.intro {
+  margin: 35px 10px 45px 10px;
+}
+
+.intro h1 {
+  font-weight: 400;
+  font-family: var(--bs-font-serif);
+  font-size: 1.5em;
+}
+
+.intro p {
+  font-size: .9em;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 10px 30px 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.info a, .info a:link, .info a:visited {
+  color: black;
+  text-decoration: none;
+  font-size: .9em;
+}
+
+.info p {
+  font-size: .8em;
+  color: var(--bs-gray-700);
+}
+
+.info h2 {
+  font-size: 1.25em;
+}
+
+#park-footer {
+  background-image: url(../images/topo_pattern.png);
+  padding: 10px;
+  font-size: .85em;
+}
+
+#park-footer p {
+  margin: 5px 0px 18px 0px;
+  color: var(--bs-gray-700);
+}
+
+#footer-heading {
+  font-family: var(--bs-font-serif);
+  text-transform: uppercase;
+}
+
+#mail-heading {
+  margin-bottom: 5px;
+}
+
+#phone-heading {
+  margin-bottom: 5px;
+}
+
+
+@media screen and (min-width: 500px){
+  .hero-banner img {
+    height: 330px;
+  }
+
+  .hero-banner_content {
+    height: 70px;
+    font-size: 1.25em;
+  }
+
+  .intro {
+    margin: 35px 20px 45px 20px
+  }
+
+  .intro h1 {
+    font-size: 1.65em;
+  }
+
+  .intro p {
+  font-size: .95em;
+  line-height: 1.5;
+  margin: 15px 0 15px 0;
+  }
+
+  .info {
+    max-width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .info-group {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px 0 20px 0;
+  }
+
+  .info h2 {
+    font-size: 1.45em;
+  }
+
+  .info p {
+    font-size: .9em;
+  }
+}
+
+@media screen and (min-width: 620px){
+  .info-group {
+    max-width: 300px;
+  }
+}
+
+@media screen and (min-width: 750px){
+  .info-group {
+    max-width: 350px;
+  }
+}
+
+@media screen and (min-width: 1000px){
+  .hero-banner img {
+    height: 400px;
+  }
+
+  .hero-banner_content {
+    height: 80px;
+    font-size: 1.4em;
+  }
+
+  .intro h1 {
+    font-size: 1.75em;
+    margin: 30px 0 30px 0;
+  }
+
+  .intro p {
+  font-size: 1em;
+  }
+
+  .info-group {
+    max-width: 400px;
+  }
+
+  .info h2 {
+    font-size: 1.55em;
+  }
+
+  .info p {
+    font-size: .95em;
+  }
+}
