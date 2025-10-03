@@ -1,0 +1,23 @@
+#park-footer {
+  background-image: url(../images/topo_pattern.png);
+  padding: 10px;
+  font-size: .85em;
+}
+
+#park-footer p {
+  margin: 5px 0px 18px 0px;
+  color: var(--bs-gray-700);
+}
+
+#footer-heading {
+  font-family: var(--bs-font-serif);
+  text-transform: uppercase;
+}
+
+#mail-heading {
+  margin-bottom: 5px;
+}
+
+#phone-heading {
+  margin-bottom: 5px;
+}

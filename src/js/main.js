@@ -1,9 +1,6 @@
-import { getParkData, getParkInfoLinks } from "./parkService.mjs";
+import { getParkData, getInfoLinks } from "./parkService.mjs";
 import { parkIntroductionTemplate, mediaCardTemplate } from "./templates.mjs";
 import { setHeaderFooter, footerTemplate} from "./setHeaderFooter.mjs";
-
-const parkData = getParkData();
-const linkData = getParkInfoLinks();
 
 function setParkIntro(data){
   // Changes intro section to park content
@@ -18,6 +15,13 @@ function setParkInfoLinks(data) {
   infoContent.innerHTML = infoHTML;
 }
 
-setHeaderFooter(parkData);
-setParkInfoLinks(linkData);
-setParkIntro(parkData);
+async function init() {
+  let parkData = await getParkData();
+  let linkData = getInfoLinks(parkData.images);
+
+  setHeaderFooter(parkData);
+  setParkIntro(parkData);
+  setParkInfoLinks(linkData);
+}
+
+init();
