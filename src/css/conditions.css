@@ -1,0 +1,151 @@
+:root {
+    --bs-grey-3: #ccc;
+    --alert-closure: #cb2027;
+    --alert-caution: #ed7e31;
+    --alert-information: #2451a9;
+    --alert-danger: #720f04;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-serif: "Times New Roman", Times, serif;
+}
+
+.alert-information {
+  color: var(--alert-information);
+}
+.alert-danger {
+  color: var(--alert-danger);
+}
+.alert-closure {
+  color: var(--alert-closure);
+}
+.alert-caution {
+  color: var(--alert-caution);
+}
+
+#conditions-main {
+    font-family: var(--bs-font-sans-serif);
+}
+
+.conditions-title {
+    font-size: 1.35rem;
+    padding: 0 8px 0 8px;
+    font-weight: 100;
+    font-family: var(--bs-font-serif);
+}
+
+.alerts ul {
+    padding: 0 15px 0 15px;
+    margin-left: 0;
+}
+
+.alerts h2{
+    padding: 0 8px 0 8px;
+    font-size: 1.15rem;
+    margin-bottom: 0px;
+}
+
+.alert {
+    list-style-type: none;
+    display: flex;
+    font-size: 0.95rem;
+    margin: 0.5rem;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--bs-grey-3);
+}
+
+.alert svg {
+    width: 200px;
+    max-width: 42px;
+    min-width: 42px;
+    padding-right: 20px;
+    max-height: 32px;
+    margin: 0.25em;
+    flex: 0 0 auto;
+}
+
+.alert h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.alert p {
+    margin-top: 2px;
+}
+
+.visitor {
+    padding: 0 8px 0 8px;
+}
+
+.visitor h2 {
+    font-size: 1.25rem;
+}
+
+.visitor details {
+    padding: 0 15px 0 15px;
+    border: 1px solid var(--bs-grey-3);
+}
+
+.visitor details h3, .visitor details p{
+    font-size: 0.95rem;
+}
+
+.visitor details h3 {
+    font-size: 1.02em;
+}
+
+.center-section {
+    border-bottom: 1px solid var(--bs-grey-3);
+}
+
+.activities {
+    padding: 0 8px 0 8px;
+    margin-bottom: 20px;
+}
+
+.activities h2 {
+    font-size: 1.25rem;
+}
+
+.activities details {
+    padding: 0 15px 0 15px;
+    border: 1px solid var(--bs-grey-3);
+}
+
+.activities details li{
+    font-size: 0.95rem;
+}
+
+@media screen and (min-width: 500px) {
+    .alert svg {
+        max-width: 50px;
+    }
+
+    .alert {
+        font-size: 1rem;
+    }
+
+    .alerts h2 {
+        font-size: 1.4rem;
+    }
+
+    .conditions-title {
+        font-size: 1.65rem;
+    }
+
+    .visitor details p {
+        font-size: 1rem;
+    }
+
+    .visitor h2 {
+        font-size: 1.4rem;
+    }
+
+    .activities h2 {
+        font-size: 1.4rem;
+    }
+
+    .activities details li {
+        font-size: 1rem;
+    }
+}

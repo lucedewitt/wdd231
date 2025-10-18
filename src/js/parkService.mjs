@@ -230,11 +230,19 @@ async function getJson(url){
 }
 
 export async function getParkData() {
-  const parkData = await getJson("parks?parkCode=glac")
+  const parkData = await getJson("parks?parkCode=glac");
   // return just the first row of the data object
   return parkData.data[0]; 
 }
 
-// export function getParkInfoLinks() {
-//   return parkInfoLinks;
-// }
+export async function getParkAlerts(code) {
+  const parkData = await getJson(`alerts?parkCode=${code}`);
+  return parkData.data;
+}
+
+export async function getVisitorCenterData(code) {
+  const parkData = await getJson(`visitorcenters?parkCode=${code}`);
+  return parkData.data;
+}
+
+//glac
