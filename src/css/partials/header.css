@@ -1,3 +1,9 @@
+:root {
+  --bs-light-green: #eaf0dc;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
 /* Title and logo styling */
 .global-header {
   background-color: black;
@@ -47,8 +53,80 @@
   padding: 15px;
 }
 
-.global-nav {
+.closed {
+  display: flex;
+  align-content: center;
+}
+
+.closed p {
+  padding-top: 3px;
+  padding-left: 2px;
+}
+
+.open {
   display: none;
+  align-content: center;
+}
+
+.open p {
+  padding-top: 3px;
+  padding-left: 2px;
+}
+
+.global-nav {
+  position: relative;
+  z-index: 10;
+  background-color: black;
+  color: white;
+  width: 100%;
+  grid-column: 1/3;
+  border-top: 1px solid #333;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+  font-family: var(--bs-font-sans-serif);
+}
+
+.global-nav h2 {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.global-nav button {
+  background-color: transparent;
+  border: 0;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.global-nav__list {
+  margin: 0 0 5px 0;
+}
+
+.global-nav svg {
+  --icon-color: white;
+  max-width: 15px;
+  max-height: 15px;
+  padding: 0;
+}
+
+.global-nav a {
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.global-nav__toggle[aria-expanded="true"] > .closed {
+  display: none;
+}
+
+.global-nav__toggle[aria-expanded="true"] > .open {
+  display: flex;
+}
+
+.show {
+  max-height: 1000px;
+  overflow: visible;
 }
 
 .site-title {
