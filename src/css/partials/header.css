@@ -3,6 +3,9 @@
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-emperor: #4f4f4f;
+  --bs-light-green: #eaf0dc;
+  --bs-gray-800: #343a40;
 }
 /* Title and logo styling */
 .global-header {
@@ -88,8 +91,9 @@
 }
 
 .global-nav h2 {
-  font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  padding-left: 10px;
+  color: var(--bs-light-green);
 }
 
 .global-nav button {
@@ -124,9 +128,69 @@
   display: flex;
 }
 
+.global-nav ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.global-nav__list {
+  margin-bottom: 0;
+}
+
+.global-nav__split-button {
+  background-color: var(--bs-emperor);
+  font-weight: 300;
+  transition: all 0.5s;
+  display: flex;
+  width: 100%;
+}
+
+.global-nav__split-button__toggle:hover {
+  background-color: var(--bs-gray-800);
+}
+
+.global-nav__split-button > a {
+  font-weight: 500;
+  padding: 12px 10px 0px 10px;
+  font-size: 1.1rem;
+}
+
+.global-nav__split-button > button {
+  padding: 1rem 1.25rem;
+  border-left: 1px solid #444;
+  margin-left: auto;
+}
+
+.global-nav__split-button .icon {
+  transition: all 0.3s;
+}
+
+.global-nav__mini-section {
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.5s;
+}
+
+.global-nav__mini-section li {
+  margin: 0;
+  padding: 10px 5px;
+}
+
+.global-nav__mini-section a {
+  font-weight: 400;
+}
+
+.global-nav__mini-section a:hover {
+  text-decoration: underline;
+}
+
 .show {
   max-height: 1000px;
   overflow: visible;
+}
+
+.rotate {
+  transform: rotate(-90deg);
 }
 
 .site-title {
@@ -233,6 +297,31 @@ svg {
   .hero-banner_content {
     height: 70px;
     font-size: 1.25em;
+  }
+}
+
+@media screen and (min-width: 800px){
+  .global-nav__list {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+
+  .global-nav__split-button > a {
+    font-size: 1.25rem;
+  }
+
+  .global-nav__split-button {
+    background-color: black;
+  }
+
+  .global-nav__split-button__toggle {
+    display: none;
+  }
+
+  .global-nav__mini-section {
+    max-height: fit-content;
+    overflow: visible;
   }
 }
 

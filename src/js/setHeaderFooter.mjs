@@ -1,3 +1,5 @@
+import { enableNavigation } from "./navigation.mjs";
+
 export function setHeaderFooter(data){
   // Modifies the disclaimer with the park link and full name
   let disclaimerLink = document.querySelector(".disclaimer a");
@@ -6,6 +8,8 @@ export function setHeaderFooter(data){
   // Changes the web tab to the park name
   let webTitle = document.querySelector("title");
   webTitle.innerHTML = data.fullName;
+  // Sets up the menu
+  enableNavigation();
   // Sets the hero image to the first park image
   let heroImg = document.querySelector(".hero-banner img");
   heroImg.setAttribute('src', data.images[0].url);
@@ -48,24 +52,3 @@ export function footerTemplate(info) {
   <p>${voice}</p>
   </section>`;
 }
-
-let menuButton = document.querySelector('#global-nav-toggle');
-
-function enableNavigation() {
-  menuButton.addEventListener('click', (ev) => {
-    let target = ev.target;
-    document.querySelector('.global-nav').classList.toggle("show");
-    if (target.tagName != "BUTTON") {
-      target = target.closest("button");
-    }
-    if (document.querySelector('.global-nav').classList.contains("show")) {
-      target.setAttribute("aria-expanded", true);
-    } else {
-      target.setAttribute("aria-expanded", false);
-    }
-
-    console.log("toggle");
-  })
-}
-
-enableNavigation();
