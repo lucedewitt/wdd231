@@ -98,6 +98,12 @@
     border-bottom: 1px solid var(--bs-grey-3);
 }
 
+.center-section a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
 .activities {
     padding: 0 8px 0 8px;
     margin-bottom: 20px;
